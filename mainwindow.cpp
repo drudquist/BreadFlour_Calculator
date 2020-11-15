@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //allow only numbers
+    //allow only numbers and decimal point
     ui->bf_Amount->setValidator(new QRegExpValidator(QRegExp("^\\d*(\\.\\d+)?$")));
     ui->apf_Amount->setValidator(new QRegExpValidator(QRegExp("^\\d*(\\.\\d+)?$")));
     ui->vwg_Amount->setValidator(new QRegExpValidator(QRegExp("^\\d*(\\.\\d+)?$")));
