@@ -11,9 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     //allow only numbers
-    ui->bf_Amount->setValidator(new QRegExpValidator(QRegExp("[0-9]+,[0-9][0-9]*")));
-    ui->apf_Amount->setValidator(new QRegExpValidator(QRegExp("[0-9]+,[0-9][0-9]*")));
-    ui->vwg_Amount->setValidator(new QRegExpValidator(QRegExp("[0-9]+,[0-9][0-9]*")));
+    ui->bf_Amount->setValidator(new QRegExpValidator(QRegExp("^\\d*(\\.\\d+)?$")));
+    ui->apf_Amount->setValidator(new QRegExpValidator(QRegExp("^\\d*(\\.\\d+)?$")));
+    ui->vwg_Amount->setValidator(new QRegExpValidator(QRegExp("^\\d*(\\.\\d+)?$")));
 }
 
 MainWindow::~MainWindow()
