@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>338</width>
+    <height>540</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>20</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -17,49 +22,15 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>70</y>
-      <width>401</width>
-      <height>452</height>
+      <x>20</x>
+      <y>10</y>
+      <width>281</width>
+      <height>424</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
-      <widget class="QTextEdit" name="bf_AmountText">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="html">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0.0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QTextEdit" name="vwg_AmountText">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="html">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0.0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="1">
-      <widget class="QPushButton" name="calculate_PushButton">
+      <widget class="QPushButton" name="calculate">
        <property name="text">
         <string>Calculate</string>
        </property>
@@ -68,92 +39,163 @@ p, li { white-space: pre-wrap; }
      <item row="5" column="1">
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QRadioButton" name="vwg_unitsTbsp_RadioButton">
+        <widget class="QRadioButton" name="vwg_unitsTbsp_radioButton">
          <property name="text">
           <string>Tbsp</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">vwg_buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="vwg_unitsTsp_RadioButton">
+        <widget class="QRadioButton" name="vwg_unitsTsp_radioButton">
          <property name="text">
           <string>Tsp</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">vwg_buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="vwg_unitsGrams_radioButton">
+         <property name="text">
+          <string>Grams</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">vwg_buttonGroup</string>
+         </attribute>
         </widget>
        </item>
       </layout>
      </item>
-     <item row="1" column="1">
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item row="3" column="1">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QRadioButton" name="bf_unitsCup_RadioButton">
+        <widget class="QRadioButton" name="apf_unitsCup_radioButton">
          <property name="text">
           <string>Cups</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">apf_buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="bf_unitsTbsp_RadioButton">
+        <widget class="QRadioButton" name="apf_unitsTbsp_radioButton">
          <property name="text">
           <string>Tbsp.</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">apf_buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="apf_unitsGrams_radioButton">
+         <property name="text">
+          <string>Grams</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">apf_buttonGroup</string>
+         </attribute>
         </widget>
        </item>
       </layout>
      </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="vwg_Label">
+       <property name="text">
+        <string>Vital Wheat Gluten</string>
+       </property>
+      </widget>
+     </item>
      <item row="3" column="0">
-      <widget class="QTextEdit" name="apf_AmountText">
+      <widget class="QLineEdit" name="apf_Amount">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="html">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0.0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="bf_Label">
        <property name="text">
         <string>Bread Flour</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="bf_Amount">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QRadioButton" name="apf_unitsCup_RadioButton">
+        <widget class="QRadioButton" name="bf_unitsCup_radioButton">
          <property name="text">
           <string>Cups</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bf_buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="apf_unitsTbsp_RadioButton">
+        <widget class="QRadioButton" name="bf_unitsTbsp_radioButton">
          <property name="text">
           <string>Tbsp.</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bf_buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="bf_unitsGrams_radioButton">
+         <property name="text">
+          <string>Grams</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bf_buttonGroup</string>
+         </attribute>
         </widget>
        </item>
       </layout>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="apf_Label">
        <property name="text">
         <string>All Purpose Flour</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Vital Wheat Gluten</string>
+     <item row="5" column="0">
+      <widget class="QLineEdit" name="vwg_Amount">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
       </widget>
      </item>
@@ -166,12 +208,17 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>338</width>
+     <height>29</height>
     </rect>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="bf_buttonGroup"/>
+  <buttongroup name="apf_buttonGroup"/>
+  <buttongroup name="vwg_buttonGroup"/>
+ </buttongroups>
 </ui>
