@@ -78,7 +78,6 @@ void MainWindow::Calculate()
     const double vwg_Amount = bf_Amount * vwg_Percentage;
     const double apf_Amount = bf_Amount * apf_Percentage;
 
-    //TODO: needs truncation
     ui->vwg_Amount->setText(QString::number(vwg_Amount));
     ui->apf_Amount->setText(QString::number(apf_Amount));
 }
