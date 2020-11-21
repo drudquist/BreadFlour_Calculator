@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->bf_Amount->setFocus();
 
     const auto number_decimal_only = QRegExp("^\\d*(\\.\\d+)?$");
     //allow only numbers and decimal point
