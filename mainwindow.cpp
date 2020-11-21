@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->vwg_ProteinPct->setValidator(new QRegExpValidator(number_decimal_only));
 
     connect(ui->calculate, SIGNAL(clicked()), this, SLOT(Calculate()));
+    connect(ui->clear, SIGNAL(clicked()), this, SLOT(Clear()));
 }
 
 MainWindow::~MainWindow()
@@ -47,6 +48,7 @@ void MainWindow::Calculate()
          throw;
      }
 
+    //Get User Input
     const double bf_Amount = ui->bf_Amount->text().toDouble();
     const double tpp = ui->bf_ProteinPct->text().toDouble();
     const double fpp = ui->apf_ProteinPct->text().toDouble();
@@ -77,6 +79,25 @@ void MainWindow::Calculate()
     //TODO: needs truncation
     ui->vwg_Amount->setText(QString::number(vwg_Amount));
     ui->apf_Amount->setText(QString::number(apf_Amount));
+}
+
+void MainWindow::Clear()
+{
+    const QPushButton* const button = static_cast<const QPushButton*>(sender());
+
+    if(button != ui->clear)
+    {
+        //application is broken
+        throw;
+    }
+
+    ui->bf_Amount->setText("");
+    ui->apf_Amount->setText("");
+    ui->vwg_Amount->setText("");
+
+    ui->bf_ProteinPct->setText("");
+    ui->apf_ProteinPct->setText("");
+    ui->vwg_ProteinPct->setText("");
 }
 
 double MainWindow::CalculateVitalWheatGlutenPercentage(const double tpp, const double fpp, const double vwgpp) const

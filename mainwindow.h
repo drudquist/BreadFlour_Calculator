@@ -26,6 +26,7 @@ private:
 
 
 private slots:
+    void Clear();
     void Calculate();
 
 };
