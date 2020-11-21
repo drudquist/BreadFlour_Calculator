@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QMessageBox>
 #include <QRegExpValidator>
 
 /*Terminology
@@ -57,14 +58,14 @@ void MainWindow::Calculate()
 
     if(bf_Amount <= 0.0 || tpp <= 0.0 || fpp <= 0.0 || vwgpp <= 0.0)
     {
-        //TODO: need pop up window informing of needing these values to be greater than zero.
+       QMessageBox::warning(this, "Warning", "Values must be greater than zero.");
         return;
     }
 
     //apf_ProteinPct cannot be greater than vwg_ProteinPct
     if(fpp >= vwgpp)
     {
-        //TODO: need pop up window informing of backwards values
+        QMessageBox::warning(this, "Warning", "All purpose flour protein percentage cannot be greater than vital wheat gluten percentage.");
         return;
     }
 
